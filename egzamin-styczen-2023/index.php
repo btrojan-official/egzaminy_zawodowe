@@ -37,9 +37,9 @@
         $q = "SELECT COUNT(*) FROM pracownicy";
         $res = mysqli_query($con, $q);
         $row = mysqli_fetch_array($res);
-        echo "<hr/>
-              <h1>Liczba zatrudnionych pracowników</h1>
-              <p>$row[0]</p>";
+        echo "
+            <h1>Liczba zatrudnionych pracowników</h1>
+            <p>$row[0]</p>";
         ?>
     </div>
     <div id="prawy">
