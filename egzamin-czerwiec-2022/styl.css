@@ -1,0 +1,59 @@
+*{
+    font-family: "Garamond", serif;
+}
+
+header{
+    width: 100%;
+    background: linear-gradient(#97b498, #c8e6c9);
+    text-align: center;
+    padding: 5px;
+}
+
+header > h1{
+    text-align: center;
+    color: white;
+}
+
+main{
+    width: 100%;
+    display: flex;
+}
+
+#lewy{
+    background-color: #c8e6c9;
+    color: #005005;
+    width: 40%;
+    height: 600px;
+}
+
+#prawy{
+    color: #005005;
+    width: 60%;
+    height: 600px;
+    overflow: scroll;
+}
+
+footer{
+    width: 100%;
+    background: linear-gradient(#c8e6c9, #97b498);
+    color: white;
+    padding: 12px;
+}
+
+video{
+    width: 100%;
+}
+
+form{
+    padding: 10px 50px;
+}
+
+form > button{
+    color: white;
+    background-color:  #97b498;
+}
+
+form > button:hover{
+    color: #97b498;
+    background-color:  white;
+}
