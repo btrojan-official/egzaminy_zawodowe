@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Firma IT</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="logo.png">
+        <link rel="stylesheet" href="styl.css">
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <div id="header-top">
+                    <div id="logo"><img src="logo.png" alt="firma it"></div>
+                    <nav>
+                        <a href="index.html">Strona Główna</a>
+                        <a href="uslugi.html">Usługi</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </nav>
+                </div>
+                <div id="header-bottom">
+                    <img src="baner1.gif" alt="Usługi informatyczne">
+                </div>
+            </header>
+            <main>
+                <h2>Kontakt</h2>
+                <table>
+                    <tr><td>Imię:</td><td><input type="text" id="imie"></td></tr>
+                    <tr><td>Nazwisko:</td><td><input type="text" id="nazwisko"></td></tr>
+                    <tr><td>Email:</td><td><input type="email" id="email"></td></tr>
+                    <tr><td>Zgłoszenie:</td><td><textarea id="zgloszenie" rows="10" cols="40"></textarea></td></tr>
+                    <tr><td></td><td><input type="checkbox" id="regulamin"><label for="regulamin">Zapoznałam/em się z regulaminem</label></td></tr>
+                    <tr><td></td><td><button type="reset" id="resetuj_button">Resetuj</button><button id="przeslij_button">Prześlij</button></td></tr>
+                </table>
+                <hr>
+                <p id="form_message"></p>
+            </main>
+            <footer>
+                <span>Autor strony - <strong>000000000</strong></span>
+            </footer>
+        </div>
+    </body>
+</html>
+<script>
+    let name = document.getElementById("imie");
+    let surname = document.getElementById("nazwisko");
+    let email = document.getElementById("email");
+    let report = document.getElementById("zgloszenie");
+
+    let approvement = document.getElementById("regulamin");
+    let reset_button = document.getElementById("resetuj_button");
+    let send_button = document.getElementById("przeslij_button");
+
+    let form_message = document.getElementById("form_message");
+
+    reset_button.addEventListener("click", ()=>{
+        name.value = "";
+        surname.value = "";
+        email.value = "";
+        report.value = "";
+        approvement.checked = false;
+    })
+
+    send_button.addEventListener("click", ()=>{
+        if(approvement.checked){
+            form_message.innerHTML = `${name.value.toUpperCase()} ${surname.value.toUpperCase()}<br>Treść twojej sprawy: ${report.value}`;
+            form_message.style.color = "navy";
+        }else{
+            form_message.innerHTML = "Musisz zapoznać się z regulaminem";
+            form_message.style.color = "red";
+        }
+    })
+</script>

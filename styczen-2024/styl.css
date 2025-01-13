@@ -1,0 +1,57 @@
+body{
+    background-color: #EEEEEE;
+    font-family: 'Helvetica';
+}
+.page{
+    width: 90%;
+    margin: auto;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+#header-top{
+    display: flex;
+    background-color: lightblue;
+}
+#header-top > *{
+    width: 100%;
+    background-color: lightblue;
+    margin: 10px 0;
+    height: 100px;
+}
+
+#header-bottom{
+    background-color: #DDDDDD;
+    height: 200px;
+}
+
+main{
+    color: navy;
+    margin: 50px;
+    height: 400px;
+}
+
+footer{
+    text-align: right;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+button{
+    background-color: lightblue;
+    color: navy;
+}
+
+nav > a{
+    color: navy;
+    font-size: 150%;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+nav > a:hover{
+    border: 1px solid navy;
+}
